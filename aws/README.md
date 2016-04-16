@@ -2,7 +2,7 @@
 
 ## Terraform Commands
 
-* `terraform get` to collect the required modules
-* `terraform plan` to see what it would do
-* `terraform apply` to actually make the changes
-* `terraform destroy` to remove all resources built with `terraform apply`
+* [`terraform get`](https://www.terraform.io/docs/commands/get.html)
+* [`terraform plan`](https://www.terraform.io/docs/commands/plan.html)
+* [`terraform apply`](https://www.terraform.io/docs/commands/apply.html)
+* [`terraform destroy`](https://www.terraform.io/docs/commands/destroy.html)

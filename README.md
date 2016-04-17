@@ -47,7 +47,7 @@ Terraform provisioning will contain examples of:
 
 Terraform code for the above code is to be released incrementally in parts, accompanied by a blog. The releases will be split as follows:
 
-- Release 1: Directory Structure and Basic Compute in AWS
+- Release 1: Directory Structure and Basic Compute in AWS (Demo found in './aws/README.md')
 - Release 2: Basic Compute in Microsoft Azure, Google Cloud & Rackspace
 - Release 3: Networking Infrastructure in AWS, Microsoft Azure, Google Cloud & Rackspace
 - Release 4: Terraform Provisioning with Puppet, Chef & Ansible

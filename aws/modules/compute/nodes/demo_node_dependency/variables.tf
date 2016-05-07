@@ -9,4 +9,3 @@ variable key_name      { default = "" }
 
 # tag variables
 variable owner         { default = "" }
-variable dependency    { default = "" } # example tag variable, non-critical value

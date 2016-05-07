@@ -1,5 +1,5 @@
 # creates an instance in AWS
-resource "aws_instance" "demo-node" {
+resource "aws_instance" "demo-node-dependency" {
   # variables declared in variables.tf to specify the base ami to create an
   # instance of (ami), the quantity of this instance (count) and also the size
   # of each instance (instance_type)
@@ -7,18 +7,18 @@ resource "aws_instance" "demo-node" {
   instance_type          = "${var.instance_type}"
   count                  = "${var.count}"
   key_name               = "${var.key_name}"
-  vpc_security_group_ids = ["${aws_security_group.demo-sg.id}"]
+  vpc_security_group_ids = ["${aws_security_group.demo-dependency-sg.id}"]
 
   # metadata tagging
   tags {
-      Name  = "demo-node-${count.index}"
+      Name  = "demo-node-dependency-${count.index}"
       Owner = "${var.owner}"
   }
 }
 
 # creates a security group in AWS
-resource "aws_security_group" "demo-sg" {
-	name        = "demo-sg"
+resource "aws_security_group" "demo-dependency-sg" {
+	name        = "demo-dependency-sg"
 	description = "Allow SSH traffic incoming, allow all outgoing traffic"
 
   # allow SSH connectivity
@@ -39,8 +39,7 @@ resource "aws_security_group" "demo-sg" {
 
   # metadata tagging
 	tags {
-      Name       = "demo_sg"
-      Owner      = "${var.owner}"
-      Depends_on = "${var.dependency}"# example tag variable, non-critical value
+      Name  = "demo_dependency_sg"
+      Owner = "${var.owner}"
   }
 }

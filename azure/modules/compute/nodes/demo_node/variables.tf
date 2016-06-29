@@ -1,0 +1,5 @@
+image          = "${var.image}"#"Ubuntu Server 14.04 LTS"
+size           = "${var.size}"#"Basic_A1"
+location       = "${var.location}"#"West US"
+username       = "${var.ssh_username}"#"terraform"
+password       = "${var.ssh_password}"#"Pass!admin123"

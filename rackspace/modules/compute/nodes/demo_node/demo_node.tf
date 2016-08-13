@@ -1,20 +1,29 @@
+# creates an instance in Rackspace
 resource "openstack_compute_instance_v2" "demo-node" {
+  # variables declared in variables.tf to specify the base ami to create an
+  # instance of (image_id), the quantity of this instance (count) and also the size
+  # of each instance (flavor_id)
   name            = "demo-node-${count.index}"
-  image_id        = "${var.image_id}"#"ad091b52-742f-469e-8f3c-fd81cadf0743"
-  flavor_id       = "${var.flavor_id}"#"3"
-  key_pair        = "${var.key_pair}"#"my_key_pair_name"
+  image_id        = "${var.image_id}"
+  flavor_id       = "${var.flavor_id}"
+  count           = "${var.count}"
+  key_pair        = "${var.key_pair}"
+  admin_pass      = "${var.admin_pass}"
   security_groups = ["demo-sg"]
 
+  # metadata tagging
   metadata {
     Contact = "${var.contact}"
   }
 }
 
+# creates a security group in Rackspace
 resource "openstack_networking_secgroup_v2" "demo-sg" {
   name        = "demo-sg"
   description = "A security group for demonstration purposes"
 }
 
+# creates a security group rule in Rackspace
 resource "openstack_networking_secgroup_rule_v2" "demo-sg-rule" {
   direction         = "ingress"
   ethertype         = "IPv4"

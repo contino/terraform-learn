@@ -1,4 +1,4 @@
-# Terraform Best Practice
+# Terraform Learn
 
 This repository aims to provide a helpful set of structural guidelines to follow
 when working with Terraform, as well giving a basic enablement with the tool through

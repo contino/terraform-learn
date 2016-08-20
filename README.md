@@ -16,8 +16,7 @@ and networking infrastructure into the following cloud providers:
 
 * [AWS](http://aws.amazon.com/)
 * [Microsoft Azure](https://azure.microsoft.com/en-gb/)
-* [Google Cloud](https://cloud.google.com/)
-* [Rackspace](http://www.rackspace.co.uk/)
+* [Google Cloud Platform](https://cloud.google.com/)
 
 Networking infrastructure will contain:
 
@@ -33,8 +32,7 @@ Compute infrastructure will contain:
 
 * EC2 instances (AWS)
 * Azure instances (Microsoft Azure)
-* Google compute instances (Google Cloud)
-* OpenStack compute instances (Rackspace)
+* Google compute instances (Google Cloud Platform)
 
 Terraform provisioning will contain examples of:
 
@@ -48,8 +46,8 @@ Terraform provisioning will contain examples of:
 Terraform code for the above code is to be released incrementally in parts, accompanied by a blog. The releases will be split as follows:
 
 - Release 1: Directory Structure and Basic Compute in AWS
-- Release 2: Basic Compute in Microsoft Azure, Google Cloud & Rackspace
-- Release 3: Networking Infrastructure in AWS, Microsoft Azure, Google Cloud & Rackspace
+- Release 2: Basic Compute in Microsoft Azure & Google Cloud Platform
+- Release 3: Networking Infrastructure in AWS, Microsoft Azure & Google Cloud Platform
 - Release 4: Terraform Provisioning with Puppet, Chef & Ansible
 
 Each release will also be accompanied with a series of demos relating to the new functionality.

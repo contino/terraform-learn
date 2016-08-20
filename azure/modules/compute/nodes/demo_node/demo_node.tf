@@ -1,6 +1,6 @@
 resource "azure_security_group" "demo-sg" {
     name     = "demo-sg"
-    location = "${var.location}"#"West US"
+    location = "${var.location}"
 }
 
 resource "azure_security_group_rule" "ssh-access" {
@@ -18,12 +18,13 @@ resource "azure_security_group_rule" "ssh-access" {
 
 resource "azure_instance" "demo-node" {
     name           = "demo-node-${count.index}"
-    image          = "${var.image}"#"Ubuntu Server 14.04 LTS"
-    size           = "${var.size}"#"Basic_A1"
-    location       = "${var.location}"#"West US"
-    username       = "${var.ssh_username}"#"terraform"
-    password       = "${var.ssh_password}"#"Pass!admin123"
-    security group = "demo-sg"
+    image          = "${var.image}"
+    size           = "${var.size}"
+    count          = "${var.count}"
+    location       = "${var.location}"
+    username       = "${var.ssh_username}"
+    password       = "${var.ssh_password}"
+    security_group = "demo-sg"
 
     endpoint {
         name         = "SSH"

@@ -1,4 +1,4 @@
-ami      = "ami-8b8c57f8"
+ami      = "ami-875042eb"
 #owner    = ""
 
 # Demo Node #

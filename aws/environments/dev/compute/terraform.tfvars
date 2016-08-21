@@ -1,5 +1,6 @@
+# General Variables #
 ami      = "ami-875042eb"
-#owner    = ""
+#owner    = "" # uncomment this variable and provide an identifying value for tagging
 
 # Demo Node #
 demo_node_instance_type  = "t2.micro"

@@ -1,4 +1,4 @@
-# Terraform Best Practice
+# Terraform Learn
 
 This repository aims to provide a helpful set of structural guidelines to follow
 when working with Terraform, as well giving a basic enablement with the tool through
@@ -16,8 +16,7 @@ and networking infrastructure into the following cloud providers:
 
 * [AWS](http://aws.amazon.com/)
 * [Microsoft Azure](https://azure.microsoft.com/en-gb/)
-* [Google Cloud](https://cloud.google.com/)
-* [Rackspace](http://www.rackspace.co.uk/)
+* [Google Cloud Platform](https://cloud.google.com/)
 
 Networking infrastructure will contain:
 
@@ -33,8 +32,7 @@ Compute infrastructure will contain:
 
 * EC2 instances (AWS)
 * Azure instances (Microsoft Azure)
-* Google compute instances (Google Cloud)
-* OpenStack compute instances (Rackspace)
+* Google compute instances (Google Cloud Platform)
 
 Terraform provisioning will contain examples of:
 
@@ -47,9 +45,9 @@ Terraform provisioning will contain examples of:
 
 Terraform code for the above code is to be released incrementally in parts, accompanied by a blog. The releases will be split as follows:
 
-- Release 1: Directory Structure and Basic Compute in AWS (Demo found in './aws/README.md')
-- Release 2: Basic Compute in Microsoft Azure, Google Cloud & Rackspace
-- Release 3: Networking Infrastructure in AWS, Microsoft Azure, Google Cloud & Rackspace
+- Release 1: Directory Structure and Basic Compute in AWS (Find the demo [here](https://github.com/contino/terraform-learn/blob/master/aws/README.md))
+- Release 2: Basic Compute in Microsoft Azure & Google Cloud Platform (Find the demos [here](https://github.com/contino/terraform-learn/blob/master/azure/README.md) and [here](https://github.com/contino/terraform-learn/blob/master/gcp/README.md) respectively)
+- Release 3: Networking Infrastructure in AWS, Microsoft Azure & Google Cloud Platform
 - Release 4: Terraform Provisioning with Puppet, Chef & Ansible
 
 Each release will also be accompanied with a series of demos relating to the new functionality.

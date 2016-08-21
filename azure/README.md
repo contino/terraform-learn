@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Terraform Azure
 
 ## Terraform Commands
@@ -31,11 +30,4 @@ This basic compute demo will consist of the orchestration of blank Basic_A1 Azur
 
 To destroy the infrastructure you have built, run command `terraform destroy -state=./terraform.tfstate -var-file=./terraform.tfvars`
 
-* The `storage_name` variable is the name of the storage service to attach to the instance, it is blob storage service in Azure that serves as the backend to the instance. To build a storage using this make a module declaration within an environment for the `storage_service` module at `./modules/compute/storage/storage_service` and pass the appropriate variables in the `terraform.tfvars` file of the specified environment. It's important to note that each storage service requires a unique name.
-=======
-# Code & Demos to come soon:
-
-* Release 2: Basic Compute in Microsoft Azure, Google Cloud & Rackspace
-* Release 3: Networking Infrastructure in AWS, Microsoft Azure, Google Cloud & Rackspace
-* Release 4: Terraform Provisioning with Puppet, Chef & Ansible
->>>>>>> master
+The `storage_name` variable is the name of the storage service to attach to the instance, it is blob storage service in Azure that serves as the backend to the instance. To build a storage using this make a module declaration within an environment for the `storage_service` module at `./modules/compute/storage/storage_service` and pass the appropriate variables in the `terraform.tfvars` file of the specified environment. It's important to note that each storage service requires a unique name.

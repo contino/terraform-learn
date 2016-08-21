@@ -46,7 +46,7 @@ Terraform provisioning will contain examples of:
 Terraform code for the above code is to be released incrementally in parts, accompanied by a blog. The releases will be split as follows:
 
 - Release 1: Directory Structure and Basic Compute in AWS (Find the demo [here](https://github.com/contino/terraform-learn/blob/master/aws/README.md))
-- Release 2: Basic Compute in Microsoft Azure & Google Cloud Platform (Find the demos [here](https://github.com/contino/terraform-learn/blob/master/azure/README.md)) and [here](https://github.com/contino/terraform-learn/blob/master/gcp/README.md)), respectively)
+- Release 2: Basic Compute in Microsoft Azure & Google Cloud Platform (Find the demos [here](https://github.com/contino/terraform-learn/blob/master/azure/README.md) and [here](https://github.com/contino/terraform-learn/blob/master/gcp/README.md)), respectively)
 - Release 3: Networking Infrastructure in AWS, Microsoft Azure & Google Cloud Platform
 - Release 4: Terraform Provisioning with Puppet, Chef & Ansible
 

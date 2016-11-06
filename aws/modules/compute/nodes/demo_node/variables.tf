@@ -6,7 +6,9 @@ variable ami           { default = "" }
 variable instance_type { default = "t2.micro" }
 variable count         { default = "1" }
 variable key_name      { default = "" }
+variable subnet_id     {}
+variable vpc_id        {}
 
 # tag variables
 variable owner         { default = "" }
-variable dependency    { default = "" } # example tag variable, non-critical value
+variable dependencies  { default = [""] } # example tag variable, non-critical value

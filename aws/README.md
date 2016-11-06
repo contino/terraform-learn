@@ -21,7 +21,8 @@ This basic compute demo will consist of the orchestration of blank t2.micro (fre
 
 ### Instructions
 
-Networking:
+####Networking:
+
 1. cd into `{location_of_this_repo}/aws/environments/{environment_you_wish_to_build}/networking`
 2. open and edit `terraform.tfvars` according to your networking requirements
 3. run command `export AWS_ACCESS_KEY_ID={your_access_key}`  
@@ -33,7 +34,8 @@ Networking:
 
 To destroy the infrastructure you have built, run command `terraform destroy -state=./terraform.tfstate -var-file=./terraform.tfvars`
 
-Compute:
+####Compute:
+
 1. cd into `{location_of_this_repo}/aws/environments/{environment_you_wish_to_build}/compute`
 2. open `terraform.tfvars` and enter a value for variables `vpc_id` and `subnet_id` from the networking infrastructure you have previously built, `owner` and `ssh_key_name` (the name of the key associated with your AWS account), and save
 3. run command `export AWS_ACCESS_KEY_ID={your_access_key}`  

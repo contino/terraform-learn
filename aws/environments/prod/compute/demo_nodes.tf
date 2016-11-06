@@ -7,6 +7,8 @@ variable owner { default = "" }
 variable demo_node_instance_type  { default = "t2.micro" }
 variable demo_node_instance_count { default = "1" }
 variable demo_node_ssh_key_name   { default = "" }
+variable demo_node_subnet_id      {}
+variable demo_node_vpc_id         {}
 
 module "demo-node" {
   source = "../../../modules/compute/nodes/demo_node"
@@ -16,9 +18,11 @@ module "demo-node" {
   instance_type = "${var.demo_node_instance_type}"
   count         = "${var.demo_node_instance_count}"
   key_name      = "${var.demo_node_ssh_key_name}"
+  subnet_id     = "${var.demo_node_subnet_id}"
+  vpc_id        = "${var.demo_node_vpc_id}"
 
   owner         = "${var.owner}"
-  dependency    = "${module.demo-node-dependency.demo_node_dependency_instance_id}"
+  dependencies    = ["${module.demo-node-dependency.demo_node_dependency_instance_id}"]
 }
 #####################
 
@@ -27,6 +31,8 @@ module "demo-node" {
 variable demo_node_dependency_instance_type  { default = "t2.micro" }
 variable demo_node_dependency_instance_count { default = "1" }
 variable demo_node_dependency_ssh_key_name   { default = "" }
+variable demo_node_dependency_subnet_id      {}
+variable demo_node_dependency_vpc_id         {}
 
 module "demo-node-dependency" {
   source = "../../../modules/compute/nodes/demo_node_dependency"
@@ -35,6 +41,8 @@ module "demo-node-dependency" {
   instance_type = "${var.demo_node_dependency_instance_type}"
   count         = "${var.demo_node_dependency_instance_count}"
   key_name      = "${var.demo_node_dependency_ssh_key_name}"
+  subnet_id     = "${var.demo_node_dependency_subnet_id}"
+  vpc_id        = "${var.demo_node_dependency_vpc_id}"
 
   owner         = "${var.owner}"
 }

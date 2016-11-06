@@ -47,7 +47,7 @@ Terraform code for the above code is to be released incrementally in parts, acco
 
 - Release 1: Directory Structure and Basic Compute in AWS (Find the demo [here](https://github.com/contino/terraform-learn/blob/master/aws/README.md))
 - Release 2: Basic Compute in Microsoft Azure & Google Cloud Platform (Find the demos [here](https://github.com/contino/terraform-learn/blob/master/azure/README.md) and [here](https://github.com/contino/terraform-learn/blob/master/gcp/README.md) respectively)
-- Release 3: Networking Infrastructure in AWS, Microsoft Azure & Google Cloud Platform
+- Release 3: Networking Infrastructure 
 - Release 4: Terraform Provisioning with Puppet, Chef & Ansible
 
 Each release will also be accompanied with a series of demos relating to the new functionality.

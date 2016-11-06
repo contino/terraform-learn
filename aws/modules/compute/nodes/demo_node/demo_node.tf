@@ -8,6 +8,7 @@ resource "aws_instance" "demo-node" {
   count                  = "${var.count}"
   key_name               = "${var.key_name}"
   vpc_security_group_ids = ["${aws_security_group.demo-sg.id}"]
+  subnet_id              = "${var.subnet_id}"
 
   # metadata tagging
   tags {
@@ -20,6 +21,7 @@ resource "aws_instance" "demo-node" {
 resource "aws_security_group" "demo-sg" {
 	name        = "demo-sg"
 	description = "Allow SSH traffic incoming, allow all outgoing traffic"
+  vpc_id      = "${var.vpc_id}"
 
   # allow SSH connectivity
 	ingress {
@@ -41,6 +43,6 @@ resource "aws_security_group" "demo-sg" {
 	tags {
       Name       = "demo_sg"
       Owner      = "${var.owner}"
-      Depends_on = "${var.dependency}"# example tag variable, non-critical value
+      Depends_on = "${var.dependencies[0]}" # example tag variable, non-critical value
   }
 }

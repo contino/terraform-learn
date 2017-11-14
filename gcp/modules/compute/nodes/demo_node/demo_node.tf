@@ -7,10 +7,11 @@ resource "google_compute_instance" "demo-node" {
   machine_type = "${var.machine_type}"
   zone         = "${var.zone}"
   count        = "${var.count}"
-
-  # machine image to use
-  disk {
-    image = "${var.image}"
+  
+  boot_disk {
+    initialize_params {
+      image = "${var.image}"
+    }
   }
 
   # network config

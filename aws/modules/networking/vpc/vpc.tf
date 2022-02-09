@@ -5,7 +5,6 @@ resource "aws_vpc" "vpc" {
 
   # metadata tagging
   tags = {
-    Type = map
     "Name"        = "${var.environment}_vpc"
     "Environment" = "${var.environment}"
   }

@@ -4,8 +4,9 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames = true
 
   # metadata tagging
-  tags {
-    Name        = "${var.environment}_vpc"
-    Environment = "${var.environment}"
+  tags = {
+    Type = map
+    "Name"        = "${var.environment}_vpc"
+    "Environment" = "${var.environment}"
   }
 }

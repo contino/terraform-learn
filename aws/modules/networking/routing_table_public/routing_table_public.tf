@@ -8,7 +8,7 @@ resource "aws_route_table" "public_route_table" {
     gateway_id = "${var.gateway_id}"
   }
 
-  tags {
+  tags = {
     Name        = "${var.environment}_${var.purpose}_routing_table"
     Environment = "${var.environment}"
   }

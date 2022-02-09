@@ -8,7 +8,7 @@ resource "aws_route_table" "private_route_table" {
     nat_gateway_id = "${var.nat_gateway_id}"
   }
 
-  tags {
+  tags = {
     Name        = "${var.environment}_${var.purpose}_routing_table"
     Environment = "${var.environment}"
   }

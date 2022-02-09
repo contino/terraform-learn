@@ -11,7 +11,7 @@ resource "aws_instance" "demo-node-dependency" {
   subnet_id              = "${var.subnet_id}"
 
   # metadata tagging
-  tags {
+  tags = {
       Name  = "demo-node-dependency-${count.index}"
       Owner = "${var.owner}"
   }
@@ -40,7 +40,7 @@ resource "aws_security_group" "demo-dependency-sg" {
 	}
 
   # metadata tagging
-	tags {
+	tags = {
       Name  = "demo_dependency_sg"
       Owner = "${var.owner}"
   }
